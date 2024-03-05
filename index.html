@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- js -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+	<!-- bootstrap-icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+		integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
+
+	<title>Aureka</title>
+</head>
+
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="Gc-sidebar">
+		<a href="#" class="Gc-brand">
+			<i class='bx bxs-smile'></i>
+			<span class="Gc-text">Aureka</span>
+		</a>
+		<ul class="Gc-side-menu Gc-top">
+			<li>
+				<div class="Gc-Dropdown">
+					<a href="#">
+
+						<i class='bx bxs-dashboard'></i>
+						<span class="Gc-text">Dashboard</span>
+					</a>
+					<i class='bx bx-chevron-down ' onclick="toggleSubMenu()"></i>
+				</div>
+
+			</li>
+			<!-- Dashboard submenu -->
+			<ul class="Gc-submenu" id="Gc-submenu-content">
+				<li><a href="#">Overview</a></li>
+				<li><a href="#">Orders</a></li>
+				<li><a href="#">Announcements</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Subscription</a></li>
+			</ul>
+
+
+			<li>
+				<div class="Gc-Dropdown">
+					<a href="#">
+						<i class='bx bxs-shopping-bag-alt'></i>
+						<span class="Gc-text">Finance</span>
+					</a>
+					<i class='bx bx-chevron-down' onclick="FinanceSubMenu()"></i>
+				</div>
+			</li>
+			<!-- Finance submenu -->
+			<ul class="Gc-submenu" id="Gc-Finance-Submenu">
+				<li><a href="#">Withdraw</a></li>
+				<li><a href="#">Reverse Withdrawal</a></li>
+				<li><a href="#">Payment</a></li>
+				<li><a href="#">Analytics</a></li>
+
+			</ul>
+
+			<li>
+				<div class="Gc-Dropdown">
+					<a href="#">
+						<i class='bx bxs-doughnut-chart'></i>
+						<span class="Gc-text">Opreations</span>
+					</a>
+					<i class='bx bx-chevron-down' onclick="OperationSubMenu()"></i>
+				</div>
+			</li>
+			<!-- Operations submenu -->
+			<ul class="Gc-submenu" id="Gc-Operations-submenu">
+				<li><a href="#">Staff</a></li>
+				<li><a href="#">Delivery Management</a></li>
+
+			</ul>
+			<li>
+				<div class="Gc-Dropdown">
+					<a href="#">
+						<i class='bx bxs-message-dots'></i>
+						<span class="Gc-text">Marleketing</span>
+					</a>
+					<i class='bx bx-chevron-down' onclick="MarketingSubMenu()"></i>
+				</div>
+			</li>
+			<!-- Marketing submenu -->
+			<ul class="Gc-submenu" id="Gc-Marketing-submenu">
+				<li><a href="#">Store Page</a></li>
+				<li><a href="#">Coupons</a></li>
+				<li><a href="#">Followers</a></li>
+				<li><a href="#">Social Profile</a></li>
+				<li><a href="#">Store SEO</a></li>
+				<li><a href="#">Badge</a></li>
+			</ul>
+			<li>
+				<div class="Gc-Dropdown">
+					<a href="#">
+						<i class='bx bxs-group'></i>
+						<span class="Gc-text">Customer Support</span>
+					</a>
+					<i class='bx bx-chevron-down' onclick="CustomerSubMenu()"></i>
+				</div>
+			</li>
+			<!-- Customer support submenu -->
+			<ul class="Gc-submenu" id="Gc-Customer-submenu">
+				<li><a href="#">Reviews</a></li>
+				<li><a href="#">Support</a></li>
+
+			</ul>
+		</ul>
+		<ul class="Gc-side-menu">
+			<!-- <li>
+				<a href="#">
+					<i class='bx bxs-cog'></i>
+					<span class="Gc-text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="Gc-logout">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="Gc-text">logout</span>
+				</a>
+			</li> -->
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="Gc-content">
+		<!-- NAVBAR -->
+		<nav id="Gc-nav">
+			<div class="Gc-adminname">
+				<div>
+
+					<span><i class='bx bx-menu'></i></span>
+					<a href="#" class="Gc-nav-link">Good Morning, Smith</a>
+
+				</div>
+				<!-- <div>
+					<input type="checkbox" id="Gc-switch-mode" hidden>
+					<label for="Gc-switch-mode" class="Gc-switch-mode"></label>
+				</div> -->
+				<!-- <button onclick="btn()" id="shivi">toggle</button> -->
+
+			</div>
+
+			<div class="Gc-navbar">
+				<form action="#">
+					<div class="Gc-form-input">
+						<input type="search" placeholder="Search...">
+						<button type="submit"><i class='bx bx-search'></i></button>
+					</div>
+				</form>
+				<i class='bx bx-microphone'></i>
+				<a href="#" class="profile">
+					<img src="img/people.png">
+				</a>
+				<div class="Gc-info" id="Gc-profileTrigger" onclick="mydropFunction()">
+					<p >Hey Daniel<span><i class="bi bi-chevron-down"></i></span></p>
+					<p class="Gc-admin">Admin</p>
+					<div id="myDropdown" class="Gc-dropdown-content">
+						<div>
+							<a href="#">
+								<i class='bx bxs-cog'></i>
+								<span class="Gc-text">Settings</span>
+							</a>
+						</div>
+						<div>
+							<a href="#" class="Gc-logout">
+								<i class='bx bxs-log-out-circle'></i>
+								<span class="Gc-text">Logout</span>
+							</a>
+						</div>
+						<div>
+							<a href="#" class="Gc-logout">
+								<i class='bx bxs-message-alt-edit'></i>
+								<span class="Gc-text">Edit</span>
+							</a>
+						</div>
+						
+						
+					  
+					</div>
+				</div>
+				
+			
+			</div>
+
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="Gc-head-title">
+				<div class="Gc-left">
+					<h1>Dashboard</h1>
+					<ul class="Gc-breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+
+						</li>
+						<li><i class='bx bx-chevron-right'></i></li>
+						<li>
+							<a class="Gc-active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<ul class="Gc-box-info">
+				<li>
+
+					<span class="Gc-text">
+						<h2>14</h2>
+						<p id="Gc-revenue">$576.00</p>
+						<p id="Gc-request">New Request</p>
+						<span>+15%</span>
+					</span>
+					<canvas id="mySmallLineChart" width="100" height="100"></canvas>
+				</li>
+				<li>
+					<span class="Gc-text">
+						<h2>14</h2>
+						<p id="Gc-revenue">$576.00</p>
+						<p id="Gc-request">Delayed Request</p>
+						<span>+15%</span>
+					</span>
+					<canvas id="myLineChart-yellow" width="100" height="100"></canvas>
+				</li>
+				<li>
+					<span class="Gc-text">
+						<h2>14</h2>
+						<p id="Gc-revenue">$576.00</p>
+						<p id="Gc-request">Upcoming Requests</p>
+						<span>+15%</span>
+					</span>
+					<canvas id="myLineChart-red" width="100" height="100"></canvas>
+				</li>
+				<li>
+					<span class="Gc-text">
+						<h2>14</h2>
+						<p id="Gc-revenue">$576.00</p>
+						<p id="Gc-request">Completed Requests</p>
+						<span>+15%</span>
+					</span>
+					<canvas id="myLineChart-blue" width="100" height="100"></canvas>
+
+				</li>
+
+			</ul>
+
+
+			<div class="Gc-table-data">
+				<div class="Gc-order">
+					<div class="Gc-head">
+						<h3>Recent Orders</h3>
+						<i class='bx bx-search'></i>
+						<i class='bx bx-filter'></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<td>Service Name</td>
+								<td>Order ID</td>
+								<td>Product Type</td>
+								<td>Customer Name</td>
+								<td>Date Ordered</td>
+								<td>Delivery Date</td>
+								<td>Status</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Computer Store</td>
+								<td>123</td>
+								<td>
+									<p>John Doe</p>
+								</td>
+								<td>Computer</td>
+								<td>26-02-2024</td>
+								<td>27-02-2024</td>
+								<td><span class="Gc-table-status Gc-completed">Completed</span></td>
+							</tr>
+							<tr>
+								<td>Computer Store</td>
+								<td>123</td>
+								<td>
+									<p>John Doe</p>
+								</td>
+								<td>Computer</td>
+								<td>26-02-2024</td>
+								<td>27-02-2024</td>
+								<td><span class="Gc-table-status Gc-pending">Pending</span></td>
+							</tr>
+							<tr>
+								<td>Computer Store</td>
+								<td>123</td>
+								<td>
+									<p>John Doe</p>
+								</td>
+								<td>Computer</td>
+								<td>26-02-2024</td>
+								<td>27-02-2024</td>
+								<td><span class="Gc-table-status Gc-process">Process</span></td>
+							</tr>
+							<tr>
+								<td>Computer Store</td>
+								<td>123</td>
+								<td>
+									<p>John Doe</p>
+								</td>
+								<td>Computer</td>
+								<td>26-02-2024</td>
+								<td>27-02-2024</td>
+								<td><span class="Gc-table-status Gc-pending">Pending</span></td>
+							</tr>
+							<tr>
+								<td>Computer Store</td>
+								<td>123</td>
+								<td>
+									<p>John Doe</p>
+								</td>
+								<td>Computer</td>
+								<td>26-02-2024</td>
+								<td>27-02-2024</td>
+								<td><span class="Gc-table-status Gc-completed">Completed</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="Gc-map-div">
+					<div id="Gc-map">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sin!4v1708929859115!5m2!1sen!2sin&layer=c"
+							allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+						</iframe>
+					</div>
+				</div>
+
+			</div>
+
+
+			<div class="GC-Worload-Summary">
+				<div class="Gc-staff">
+					<p class="Gc-summary">Staff WorkLoad Summary</p>
+					<div class="Gc-workload-search">
+						<div class="Gc-search-wrapper">
+							<span class="Gc-search-icon"><i class="bi bi-search"></i></span>
+							<input type="text" id="Gc-search-bar" placeholder="Search...">
+
+						</div>
+						<div class="Gc-selectbox">
+							<select class="">
+								<option value="Today">Today</option>
+								<option value=""></option>
+								<option value=""></option>
+							</select>
+						</div>
+						<div class="Gc-selectbox">
+							<select class="">
+								<option value="Month">Month</option>
+								<option value=""></option>
+								<option value=""></option>
+							</select>
+						</div>
+						<div class="Gc-selectbox">
+							<select class="">
+								<option value="Days">Days</option>
+								<option value=""></option>
+								<option value=""></option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="Gc-employecard">
+
+					<div class="Gc-doughnut">
+						<div class="Gc-chart-content">
+							<h3>Brittany Forbes</h3>
+
+							<p>Assistant Therapist 2016 Hyudai Elantra</p>
+							<p>35 East St.South, Nassau New Providence</p>
+
+
+						</div>
+						<div class="Gc-donutchart">
+							<div class="Gc-chart-container">
+								<canvas id="myChart" width="100" height="100"></canvas>
+								
+							</div>
+
+							<div class="Gc-doughnut-details ">
+								<ul></ul>
+							</div>
+						</div>
+
+					</div>
+					<div class="Gc-doughnut" id="Gc-doughnut-gradient-yellow">
+						<div class="Gc-chart-content">
+							<h3>Brittany Forbes</h3>
+
+							<p>Assistant Therapist 2016 Hyudai Elantra</p>
+							<p>35 East St.South, Nassau New Providence</p>
+
+
+						</div>
+						<div class="Gc-donutchart">
+							<div class="Gc-chart-container">
+								<canvas id="myChart2" width="100" height="100"></canvas>
+							</div>
+
+							<div class="Gc-doughnut-details GC-donutchart-two">
+								<ul></ul>
+							</div>
+						</div>
+
+					</div>
+					<div class="Gc-doughnut" id="Gc-doughnut-gradient-blue">
+						<div class="Gc-chart-content">
+							<h3>Brittany Forbes</h3>
+
+							<p>Assistant Therapist 2016 Hyudai Elantra</p>
+							<p>35 East St.South, Nassau New Providence</p>
+
+
+						</div>
+						<div class="Gc-donutchart">
+							<div class="Gc-chart-container">
+								<canvas id="myChartthird" width="100" height="100"></canvas>
+
+							</div>
+
+							<div class="Gc-doughnut-details GC-donutchart-third">
+								<ul></ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div class="Gc-Review-Activity">
+				<div class="Gc-activity-container">
+					<div class="Gc-review-heading">
+						<h2>Support Tickets</h2>
+						<div class="Gc-activity-container-right">
+
+							<div class="Gc-activity-card">
+								<img src="img/profile.png" alt="user" />
+								<div class="Gc-activity-card-content">
+									<span><i class='bx bxs-quote-alt-left'></i></span>
+									<div class="Gc-activity-card-details">
+										<p>
+											We had a great time collaboraring with the Filament team. They
+											have my high recommendation!
+										</p>
+										<h4>- Marnus Stephen</h4>
+									</div>
+								</div>
+							</div>
+							<div class="Gc-activity-card">
+								<img src="img/profile.png" alt="user" />
+								<div class="Gc-activity-card-content">
+									<span><i class='bx bxs-quote-alt-left'></i></span>
+									<div class="Gc-activity-card-details">
+										<p>
+											The team drastically improved our product's user experience &
+											increased our business outreach.
+										</p>
+										<h4>- Andrew Jettpace</h4>
+									</div>
+								</div>
+							</div>
+							<div class="Gc-activity-card">
+								<img src="img/profile.png" alt="user" />
+								<div class="Gc-activity-card-content">
+									<span><i class='bx bxs-quote-alt-left'></i></span>
+									<div class="Gc-activity-card-details">
+										<p>
+											I absolutely loved working with the Filament team. Complete
+											experts at what they do!
+										</p>
+										<h4>- Stacy Stone</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="Gc-review-heading">
+						<h2>Recent Reviews</h2>
+						<div class="Gc-activity-container-right">
+
+							<div class="Gc-activity-card">
+								<img src="img/profile.png" alt="user" />
+								<div class="Gc-activity-card-content">
+									<span><i class='bx bxs-quote-alt-left'></i></span>
+									<div class="Gc-activity-card-details">
+										<p>
+											We had a great time collaboraring with the Filament team. They
+											have my high recommendation!
+										</p>
+										<h4>- Marnus Stephen</h4>
+									</div>
+								</div>
+							</div>
+							<div class="Gc-activity-card">
+								<img src="img/profile.png" alt="user" />
+								<div class="Gc-activity-card-content">
+									<span><i class='bx bxs-quote-alt-left'></i></span>
+									<div class="Gc-activity-card-details">
+										<p>
+											The team drastically improved our product's user experience &
+											increased our business outreach.
+										</p>
+										<h4>- Andrew Jettpace</h4>
+									</div>
+								</div>
+							</div>
+							<div class="Gc-activity-card">
+								<img src="img/profile.png" alt="user" />
+								<div class="Gc-activity-card-content">
+									<span><i class='bx bxs-quote-alt-left'></i></span>
+									<div class="Gc-activity-card-details">
+										<p>
+											I absolutely loved working with the Filament team. Complete
+											experts at what they do!
+										</p>
+										<h4>- Stacy Stone</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="Gc-banner-container">
+
+						<div class="Gc-banner">
+
+							<div class="Gc-content">
+								<div>
+									<img src="img/announcement-icon.png" style="width: 48%;">
+
+								</div>
+								<div>
+									<p>Advertise with us</p>
+									<h3>50% 0ff</h3>
+									<p>offer ends after 5 days</p>
+									<a href="#" class="Gc-viewbtn">veiw offer</a>
+								</div>
+
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="Gc-performance-chart">
+
+				<div class="Gc-productchart">
+					<h2>Product Performance</h2>
+					<div id="bar-chart"></div>
+				</div>
+
+
+				<div class="Gc-productchart">
+					<h2>Average Service Request Completion</h2>
+					<div id="area-chart"></div>
+				</div>
+				<div class="Gc-banner-container">
+
+
+				</div>
+			</div>
+
+		</main>
+<!-- MAIN -->
+</section>
+
+<!-- CONTENT -->
+
+	<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
+		<script>
+			// BAR CHART
+			const barChartOptions = {
+				series: [
+					{
+						data: [10, 8, 6, 4],
+					},
+				],
+				chart: {
+					type: 'bar',
+					height: 350,
+					toolbar: {
+						show: false,
+					},
+				},
+				colors: ['#01395e', '#fd4445', '#0091cf', '#ffaf00'],
+				plotOptions: {
+					bar: {
+						distributed: true,
+						borderRadius: 4,
+						horizontal: false,
+						columnWidth: '40%',
+					},
+				},
+				dataLabels: {
+					enabled: false,
+				},
+				legend: {
+					show: false,
+				},
+				xaxis: {
+					categories: ['Laptop', 'Phone', 'Monitor', 'Headphones'],
+				},
+				yaxis: {
+					// title: {
+					// 	text: 'Count',
+					// },
+				},
+			};
+
+			const barChart = new ApexCharts(
+				document.querySelector('#bar-chart'),
+				barChartOptions
+			);
+			barChart.render();
+
+
+
+
+
+
+
+
+
+			// AREA CHART
+			const areaChartOptions = {
+				series: [
+					{
+						name: 'Purchase Orders',
+						data: [31, 40, 28, 51, 42, 109, 100],
+					},
+					{
+						name: 'Sales Orders',
+						data: [11, 32, 45, 32, 34, 52, 41],
+					},
+				],
+				chart: {
+					height: 350,
+					type: 'area',
+					toolbar: {
+						show: false,
+					},
+				},
+				colors: ['#4f35a1', '#246dec'],
+				dataLabels: {
+					enabled: false,
+				},
+				stroke: {
+					curve: 'smooth',
+				},
+				labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+				markers: {
+					size: 0,
+				},
+				yaxis: [
+					{
+						title: {
+							text: 'Purchase Orders',
+						},
+					},
+					{
+						opposite: true,
+						title: {
+							text: 'Sales Orders',
+						},
+					},
+				],
+				tooltip: {
+					shared: true,
+					intersect: false,
+				},
+			};
+
+			const areaChart = new ApexCharts(
+				document.querySelector('#area-chart'),
+				areaChartOptions
+			);
+			areaChart.render();
+		</script>
+		
+
+	<script>
+
+		const chartData = {
+			labels: ["Pending", "Completed", "Delayed"],
+			data: [5, 32, 10],
+			dollar: ["$576", "$876", "$987"]
+		};
+
+		const ul = document.querySelector(".Gc-doughnut-details ul");
+		const barColors = ["#ffaf00", " #01395e", " #fd4445"];
+
+		new Chart(myChart, {
+			type: "pie",
+			// plugins: [{
+			// 	beforeDraw: chart => {
+			// 		var ctx = chart.chart.ctx;
+			// 		ctx.save();
+			// 		var image = new Image();
+			// 		image.src = 'img/profile.png';
+			// 		imageSize = 30;
+
+			// 		// Set a fixed distance from the top
+			// 		var centerY = 42;
+
+			// 		// Draw the image at the specified position
+			// 		ctx.drawImage(image, chart.chart.width / 2 - imageSize / 2, centerY - imageSize / 2, imageSize, imageSize);
+			// 		ctx.restore();
+			// 	}
+			// }],
+			data: {
+				// labels: chartData.labels,
+				datasets: [
+					{
+						label: "data",
+						data: chartData.data,
+						backgroundColor: barColors,
+					},
+				],
+			},
+			options: {
+				borderWidth: 0,
+				borderRadius: 2,
+				hoverBorderWidth: 0,
+				plugins: {
+					legend: {
+						display: false,
+					},
+
+				},
+				cutoutPercentage: 70,
+
+			},
+		});
+
+		const populateUl = () => {
+			chartData.labels.forEach((l, i) => {
+				let li = document.createElement("li");
+				li.innerHTML = `${chartData.data[i]} ${l}<span class='percentage'>${chartData.dollar[i]}</span>`;
+				ul.appendChild(li);
+			});
+		};
+
+		populateUl();
+
+
+
+		const chartData1 = {
+			labels: ["Pending", "Completed", "Delayed"],
+			data: [5, 3, 1],
+			dollar: ["$576", "$876", "$987"]
+		};
+
+		const ul1 = document.querySelector(".GC-donutchart-two ul");
+		const barColors1 = ["#ffaf00", " #01395e", " #fd4445"];
+
+		new Chart(myChart2, {
+			type: "pie",
+			// plugins: [{
+			// 	beforeDraw: chart => {
+			// 		var ctx = chart.chart.ctx;
+			// 		ctx.save();
+			// 		var image = new Image();
+			// 		image.src = 'img/profile.png';
+			// 		imageSize = 30;
+
+			// 		// Set a fixed distance from the top
+			// 		var centerY = 42;
+
+			// 		// Draw the image at the specified position
+			// 		ctx.drawImage(image, chart.chart.width / 2 - imageSize / 2, centerY - imageSize / 2, imageSize, imageSize);
+			// 		ctx.restore();
+			// 	}
+			// }],
+			data: {
+				// labels: chartData.labels,
+				datasets: [
+					{
+						label: "data",
+						data: chartData1.data,
+						backgroundColor: barColors1,
+					},
+				],
+			},
+			options: {
+				borderWidth: 0,
+				borderRadius: 2,
+				hoverBorderWidth: 0,
+				plugins: {
+					legend: {
+						display: false,
+					},
+
+				},
+				cutoutPercentage: 70,
+
+			},
+		});
+
+		const populateUl1 = () => {
+			chartData.labels.forEach((l, i) => {
+				let li = document.createElement("li");
+				li.innerHTML = `${chartData1.data[i]} ${l}<span class='percentage'>${chartData1.dollar[i]}</span>`;
+				ul1.appendChild(li);
+			});
+		};
+
+		populateUl1();
+
+
+
+		const chartDatathird = {
+			labels: ["Pending", "Completed", "Delayed"],
+			data: [5, 4, 7],
+			dollar: ["$576", "$876", "$987"]
+		};
+
+		const ulthird = document.querySelector(".GC-donutchart-third ul");
+		const barColorsthird = ["#ffaf00", " #01395e", " #fd4445"];
+
+		new Chart(myChartthird, {
+			type: "pie",
+
+			// plugins: [{
+			// 	beforeDraw: chart => {
+			// 		var ctx = chart.chart.ctx;
+			// 		ctx.save();
+			// 		var image = new Image();
+			// 		image.src = 'img/profile.png';
+			// 		imageSize = 30;
+
+			// 		// Set a fixed distance from the top
+			// 		var centerY = 42;
+
+			// 		// Draw the image at the specified position
+			// 		ctx.drawImage(image, chart.chart.width / 2 - imageSize / 2, centerY - imageSize / 2, imageSize, imageSize);
+			// 		ctx.restore();
+			// 	}
+			// }],
+			data: {
+				// labels: chartData.labels,
+				datasets: [
+					{
+						label: "data",
+						data: chartDatathird.data,
+						backgroundColor: barColorsthird,
+
+					},
+				],
+			},
+			options: {
+				borderWidth: 0,
+				borderRadius: 2,
+				hoverBorderWidth: 0,
+				plugins: {
+					legend: {
+						display: false,
+					},
+
+				},
+				cutoutPercentage: 70,
+
+			},
+		});
+
+		const populateUlthird = () => {
+			chartData.labels.forEach((l, i) => {
+				let li = document.createElement("li");
+				li.innerHTML = `${chartDatathird.data[i]} ${l}<span class='percentage'>${chartDatathird.dollar[i]}</span>`;
+				ulthird.appendChild(li);
+			});
+		};
+
+		populateUlthird();
+
+
+	</script>
+
+	<script>
+		var smallChartData = {
+	labels: ["Jan", "Feb", "Mar", "Apr"],
+	datasets: [{
+		label: "Revenue",
+		borderColor: '#0091cf',
+		data: [30,35,33,38],
+		fill: false,
+		tension: 0.4 // Set the tension value for curve style
+
+	}]
+};
+
+var smallCtx = document.getElementById('mySmallLineChart').getContext('2d');
+var mySmallLineChart = new Chart(smallCtx, {
+	type: 'line',
+	data: smallChartData,
+	options: {
+		responsive: false,
+		maintainAspectRatio: false,
+		plugins: {
+					legend: {
+						display: false,
+					},
+
+				},
+		scales: {
+			x: {
+				display: false
+			},
+			y: {
+				display: false
+			}
+		}
+	}
+});
+
+      // myLinechart-yellow
+
+	  var smallChartData2 = {
+	labels: ["Jan", "Feb", "Mar", "Apr"],
+	datasets: [{
+		label: "Revenue",
+		borderColor: '#ffaf00',
+		data: [30,32,31,34],
+		fill: false,
+		tension: 0.4 // Set the tension value for curve style
+
+	}]
+};
+
+var smallCtx2 = document.getElementById('myLineChart-yellow').getContext('2d');
+var myLineChartyellow = new Chart(smallCtx2, {
+	type: 'line',
+	data: smallChartData2,
+	options: {
+		responsive: false,
+		maintainAspectRatio: false,
+		plugins: {
+					legend: {
+						display: false,
+					},
+
+				},
+		scales: {
+			x: {
+				display: false
+			},
+			y: {
+				display: false
+			}
+		}
+	}
+});
+
+
+
+  // myLinechart-red
+
+  var smallChartData3 = {
+	labels: ["Jan", "Feb", "Mar", "Apr"],
+	datasets: [{
+		label: "Revenue",
+		borderColor: '#fd4445',
+		data: [30,31,32,33],
+		fill: false,
+		tension: 0.4 // Set the tension value for curve style
+
+	}]
+};
+
+var smallCtx3 = document.getElementById('myLineChart-red').getContext('2d');
+var myLineChartred = new Chart(smallCtx3, {
+	type: 'line',
+	data: smallChartData3,
+	options: {
+		responsive: false,
+		maintainAspectRatio: false,
+		plugins: {
+					legend: {
+						display: false,
+					},
+
+				},
+		scales: {
+			x: {
+				display: false
+			},
+			y: {
+				display: false
+			}
+		}
+	}
+});
+
+
+ // myLinechart-blue
+
+ var smallChartData4 = {
+	labels: ["Jan", "Feb", "Mar", "Apr"],
+	datasets: [{
+		label: "Revenue",
+		borderColor: '#01395e',
+		data: [65,59,70,72],
+		fill: false,
+		tension: 0.4 // Set the tension value for curve style
+
+	}]
+};
+
+var smallCtx4 = document.getElementById('myLineChart-blue').getContext('2d');
+varmyLineChartblue = new Chart(smallCtx4, {
+	type: 'line',
+	data: smallChartData4,
+	options: {
+		responsive: false,
+		maintainAspectRatio: false,
+		plugins: {
+					legend: {
+						display: false,
+					},
+
+				},
+		scales: {
+			x: {
+				display: false
+			},
+			y: {
+				display: false
+			}
+		}
+	}
+});
+
+
+
+
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-doughnutlabel@1.0.2"></script>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
