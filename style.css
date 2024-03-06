@@ -738,6 +738,7 @@ tr:nth-child(even) {
 	  display: flex;
 	  align-items: center;
 	  font-size: 13px;
+	  font-weight: 600;
 	  
   }
   
@@ -845,7 +846,7 @@ tr:nth-child(even) {
 	  padding: 16px 16px;
 	  display: flex;
 	  align-items: flex-start;
-	  gap: 2rem;
+	  gap: 1rem;
 	  background-color:#fff;
 	  border-radius: 1rem;
 	  cursor: pointer;
@@ -854,7 +855,13 @@ tr:nth-child(even) {
   .Gc-activity-card img {
 	  max-width: 50px;
   }
-  
+  .Gc-date-time p{
+	font-size: 9px;
+    color: #44a5ed;
+    font-weight: 600;
+    line-height: 6px;
+    margin-top: 7px;
+  }
   .Gc-activity-card-content {
 	display: flex;
 	gap: 1rem;
