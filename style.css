@@ -1205,6 +1205,10 @@ tr:nth-child(even) {
 
 	.Gc-performance-chart {
 		grid-template-columns: 1fr;
+		padding: 11px;
+	}
+	.Gc-productchart {
+		width: 250px;
 	}
 
 	.Gc-review-heading {
@@ -1238,4 +1242,6 @@ tr:nth-child(even) {
 	.Gc-banner-container .Gc-banner .Gc-content h3 {
 		font-size: 30px;
 	}
+
+	
 }
