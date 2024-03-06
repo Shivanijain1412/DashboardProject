@@ -423,13 +423,12 @@ html {
 }
 
 #Gc-content main .Gc-box-info li {
-	padding: 24px;
+	padding: 17px 10px;
 	background: #F9F9F9;
 	border-radius: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	grid-gap: 24px;
 
 }
 
@@ -442,6 +441,9 @@ html {
 	justify-content: center;
 	align-items: center;
 }
+#Gc-content main .Gc-box-info li span p:nth-child(3){
+	font-weight: 600;
+} 
 
 #Gc-content main .Gc-box-info li:nth-child(1) {
 	background: linear-gradient(45deg, #0091cf, #cfe8ff);
@@ -548,6 +550,16 @@ html {
 	width: 100%;
 	border-collapse: collapse;
 	font-family: 'Lato', sans-serif;
+}
+
+/* tr:nth-child(odd) {
+	background-color: #f2f2f2; 
+} */
+#Gc-content main .Gc-table-data .Gc-order table thead{
+	background-color: #ffff;
+}
+tr:nth-child(even) {
+	background-color: #ffff; /* Grey background for even rows */
 }
 
 #Gc-content main .Gc-table-data .Gc-order table th {
@@ -668,35 +680,39 @@ html {
 	  align-items: center;
 	  justify-content: center;
 	  gap: 12px;
-	  width: 200px;
+	  width: 210px;
   }
   
   .Gc-doughnut {
 	display: flex;
 	  background: #fff;
 	  align-items: center;
-	  text-align: center;
 	  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 	  padding: 10px 10px;
-	  max-width: 360px;
+	  max-width: 400px;
 	  border-radius: 20px;
 	  gap: 12px;
-	  background: linear-gradient(45deg, #0091cf, #cfe8ff);
+	  background: linear-gradient(11deg, #0091cf, #cfe8ff);
 	  color: #fff;
 	  padding: 10px 13px;
 	  font-family: 'Lato', sans-serif;
   }
-  
+  .Gc-employeprofile{
+	max-width: 50px;
+  }
+  .Gc-chart-content{
+	padding-left: 1rem;
+  }
   .Gc-doughnut:hover {
 	transform: scale(1.02);
 	box-shadow: 0 4px 16px -7px rgba(0, 0, 0, 0.3);
   }
   #Gc-doughnut-gradient-yellow{
-	background: linear-gradient(45deg, #ffaf00, #fff2c6);
+	background: linear-gradient(11deg, #ffaf00, #fff2c6);
 
   }
   #Gc-doughnut-gradient-blue{
-	background: linear-gradient(45deg, #01395e, #01395e17);
+	background: linear-gradient(11deg, #01395e, #01395e17);
   }
   
   .Gc-doughnut .Gc-doughnut-details ul {
@@ -710,8 +726,9 @@ html {
 }
 .Gc-chart-content p:nth-child(2) {
     margin-bottom: 8px;
+	
 }
-  
+
   .Gc-doughnut .Gc-doughnut-details ul li {
 	list-style-type: none;
 	font-family: sans-serif;
