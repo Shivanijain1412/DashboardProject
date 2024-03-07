@@ -688,17 +688,16 @@ tr:nth-child(even) {
 
 .Gc-employecard {
 	display: flex;
-	grid-gap: 20px;
+	grid-gap: 50px;
 	font-family: 'Lato', sans-serif;
 	align-items: center;
 	justify-content: space-around;
+	margin: auto;
 
 
 }
 
-.Gc-chart-container {
-	/* width: 150px; */
-}
+
 
 .Gc-donutchart {
 	display: flex;
