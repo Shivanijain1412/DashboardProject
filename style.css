@@ -79,12 +79,12 @@ html {
 }
 
 #Gc-sidebar .Gc-side-menu li {
-	height: 48px;
 	background: transparent;
 	margin-left: 6px;
 	border-radius: 48px 0 0 48px;
-	padding: 4px;
+	padding: 14px 4px;
 	list-style: none;
+	max-height: 300px !important;
 }
 
 #Gc-sidebar .Gc-side-menu li a {
@@ -125,10 +125,20 @@ html {
 }
 
 /* new submenu */
+#Gc-submenu-content,
+#Gc-Finance-Submenu,
+#Gc-Operations-submenu,
+#Gc-Marketing-submenu,
+#Gc-Customer-submenu {
+	display: none;
+	/* height: 235px !important; */
+
+}
+
 .Gc-submenu {
 	padding: 0px 20px;
-	display: none;
-	margin-top: -10px;
+	/* display: none; */
+	margin: -22px 0px;
 }
 
 .Gc-Dropdown {
@@ -355,7 +365,7 @@ html {
 
 
 /* MAIN */
-#Gc-content main {
+#Gc-content #Gc-main-content {
 	width: 100%;
 	padding: 36px 24px;
 	font-family: 'Lato', sans-serif;
@@ -363,7 +373,7 @@ html {
 	overflow-y: auto;
 }
 
-#Gc-content main .Gc-head-title {
+#Gc-content #Gc-main-content .Gc-head-title {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -371,36 +381,36 @@ html {
 	flex-wrap: wrap;
 }
 
-#Gc-content main .Gc-head-title .Gc-left h1 {
+#Gc-content #Gc-main-content .Gc-head-title .Gc-left h1 {
 	font-size: 36px;
 	font-weight: 600;
 	margin-bottom: 10px;
 	color: #342E37;
 }
 
-#Gc-content main .Gc-head-title .Gc-left .Gc-breadcrumb {
+#Gc-content #Gc-main-content .Gc-head-title .Gc-left .Gc-breadcrumb {
 	display: flex;
 	align-items: center;
 	grid-gap: 16px;
 }
 
-#Gc-content main .Gc-head-title .Gc-left .Gc-breadcrumb li {
+#Gc-content #Gc-main-content .Gc-head-title .Gc-left .Gc-breadcrumb li {
 	color: #342E37;
 	list-style: none;
 }
 
-#Gc-content main .Gc-head-title .Gc-left .Gc-breadcrumb li a {
+#Gc-content #Gc-main-content .Gc-head-title .Gc-left .Gc-breadcrumb li a {
 	color: #AAAAAA;
 	pointer-events: none;
 	text-decoration: none;
 }
 
-#Gc-content main .Gc-head-title .Gc-left .Gc-breadcrumb li a.Gc-active {
+#Gc-content #Gc-main-content .Gc-head-title .Gc-left .Gc-breadcrumb li a.Gc-active {
 	color: #0091cf;
 	pointer-events: unset;
 }
 
-#Gc-content main .Gc-head-title .btn-download {
+#Gc-content #Gc-main-content .Gc-head-title .btn-download {
 	height: 36px;
 	padding: 0 16px;
 	border-radius: 36px;
@@ -416,7 +426,7 @@ html {
 
 
 /* card new change */
-#Gc-content main .Gc-box-info {
+#Gc-content #Gc-main-content .Gc-box-info {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 	grid-gap: 24px;
@@ -424,7 +434,7 @@ html {
 	color: #fff;
 }
 
-#Gc-content main .Gc-box-info li {
+#Gc-content #Gc-main-content .Gc-box-info li {
 	padding: 17px 10px;
 	background: #F9F9F9;
 	border-radius: 20px;
@@ -434,7 +444,7 @@ html {
 
 }
 
-#Gc-content main .Gc-box-info li .bi {
+#Gc-content #Gc-main-content .Gc-box-info li .bi {
 	width: 80px;
 	height: 80px;
 	border-radius: 10px;
@@ -444,56 +454,56 @@ html {
 	align-items: center;
 }
 
-#Gc-content main .Gc-box-info li span p:nth-child(3) {
+#Gc-content #Gc-main-content .Gc-box-info li span p:nth-child(3) {
 	font-weight: 600;
 }
 
-#Gc-content main .Gc-box-info li:nth-child(1) {
+#Gc-content #Gc-main-content .Gc-box-info li:nth-child(1) {
 	background: linear-gradient(45deg, #0091cf, #cfe8ff);
 }
 
-#Gc-content main .Gc-box-info li:nth-child(2) {
+#Gc-content #Gc-main-content .Gc-box-info li:nth-child(2) {
 	background: linear-gradient(45deg, #ffaf00, #fff2c6);
 }
 
-#Gc-content main .Gc-box-info li:nth-child(3) {
+#Gc-content #Gc-main-content .Gc-box-info li:nth-child(3) {
 	background: linear-gradient(45deg, #fd4445, #ffe0d3);
 }
 
 
 
-#Gc-content main .Gc-box-info li:nth-child(4) {
+#Gc-content #Gc-main-content .Gc-box-info li:nth-child(4) {
 	background: linear-gradient(45deg, #01395e, #01395e17);
 }
 
-#Gc-content main .Gc-box-info li:nth-child(1) .bi {
+#Gc-content #Gc-main-content .Gc-box-info li:nth-child(1) .bi {
 	background: #cfe8ff;
 	color: #0091cf;
 }
 
-#Gc-content main .Gc-box-info li:nth-child(2) .bi {
+#Gc-content #Gc-main-content .Gc-box-info li:nth-child(2) .bi {
 	background: #fff2c6;
 	color: #ffaf00;
 }
 
-#Gc-content main .Gc-box-info li:nth-child(3) .bi {
+#Gc-content #Gc-main-content .Gc-box-info li:nth-child(3) .bi {
 	background: #ffe0d3;
 	color: #fd4445;
 }
 
-#Gc-content main .Gc-box-info li:nth-child(4) .bi {
+#Gc-content #Gc-main-content .Gc-box-info li:nth-child(4) .bi {
 	background: #01395e17;
 	color: #01395e;
 
 }
 
-#Gc-content main .Gc-box-info li .Gc-text h2 {
+#Gc-content #Gc-main-content .Gc-box-info li .Gc-text h2 {
 	font-size: 24px;
 	font-weight: 600;
 	/* color: #fff; */
 }
 
-#Gc-content main .Gc-box-info li .Gc-text p {
+#Gc-content #Gc-main-content .Gc-box-info li .Gc-text p {
 	/* color: #fff; */
 }
 
@@ -508,7 +518,7 @@ html {
 
 /* table */
 
-#Gc-content main .Gc-table-data {
+#Gc-content #Gc-main-content .Gc-table-data {
 	display: flex;
 	flex-wrap: wrap;
 	grid-gap: 24px;
@@ -517,14 +527,14 @@ html {
 	color: #000;
 }
 
-#Gc-content main .Gc-table-data>div {
+#Gc-content #Gc-main-content .Gc-table-data>div {
 	border-radius: 20px;
 	background: #F9F9F9;
 	padding: 24px;
 	overflow-x: auto;
 }
 
-#Gc-content main .Gc-table-data .Gc-head {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-head {
 	display: flex;
 	align-items: center;
 	grid-gap: 16px;
@@ -532,24 +542,24 @@ html {
 	font-family: 'Lato', sans-serif;
 }
 
-#Gc-content main .Gc-table-data .Gc-head h3 {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-head h3 {
 	margin-right: auto;
 	font-size: 24px;
 	font-weight: 600;
 }
 
-#Gc-content main .Gc-table-data .Gc-head .bx {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-head .bx {
 	cursor: pointer;
 }
 
 /*  table*/
-#Gc-content main .Gc-table-data .Gc-order {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-order {
 	flex-grow: 1;
 	flex-basis: 500px;
 	width: 100%;
 }
 
-#Gc-content main .Gc-table-data .Gc-order table {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-order table {
 	width: 100%;
 	border-collapse: collapse;
 	font-family: 'Lato', sans-serif;
@@ -558,7 +568,7 @@ html {
 /* tr:nth-child(odd) {
 	background-color: #f2f2f2; 
 } */
-#Gc-content main .Gc-table-data .Gc-order table thead {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-order table thead {
 	background-color: #ffff;
 }
 
@@ -567,40 +577,40 @@ tr:nth-child(even) {
 	/* Grey background for even rows */
 }
 
-#Gc-content main .Gc-table-data .Gc-order table th {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-order table th {
 	padding-bottom: 12px;
 	font-size: 13px;
 	text-align: left;
 	border-bottom: 1px solid #eee;
 }
 
-#Gc-content main .Gc-table-data .Gc-order table td {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-order table td {
 	padding: 16px 3px;
 }
 
-#Gc-content main .Gc-table-data .Gc-order table tr td:first-child {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-order table tr td:first-child {
 	display: flex;
 	align-items: center;
 	grid-gap: 12px;
 	padding-left: 6px;
 }
 
-#Gc-content main .Gc-table-data .Gc-order table td img {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-order table td img {
 	width: 36px;
 	height: 36px;
 	border-radius: 50%;
 	object-fit: cover;
 }
 
-#Gc-content main .Gc-table-data .Gc-order table thead {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-order table thead {
 	font-weight: 900;
 }
 
-#Gc-content main .Gc-table-data .Gc-order table tbody tr:hover {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-order table tbody tr:hover {
 	background: #eee;
 }
 
-#Gc-content main .Gc-table-data .Gc-order table tr td .Gc-table-status {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-order table tr td .Gc-table-status {
 	font-size: 10px;
 	padding: 3px 5px;
 	color: #F9F9F9;
@@ -612,15 +622,15 @@ tr:nth-child(even) {
 
 }
 
-#Gc-content main .Gc-table-data .Gc-order table tr td .Gc-table-status.Gc-completed {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-order table tr td .Gc-table-status.Gc-completed {
 	background: #0091cf;
 }
 
-#Gc-content main .Gc-table-data .Gc-order table tr td .Gc-table-status.Gc-process {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-order table tr td .Gc-table-status.Gc-process {
 	background: #ffaf00;
 }
 
-#Gc-content main .Gc-table-data .Gc-order table tr td .Gc-table-status.Gc-pending {
+#Gc-content #Gc-main-content .Gc-table-data .Gc-order table tr td .Gc-table-status.Gc-pending {
 	background: #fd4445;
 }
 
@@ -1033,7 +1043,7 @@ tr:nth-child(even) {
 
 @media screen and (max-width: 768px) {
 	#Gc-sidebar {
-		width: 200px;
+		width: 210px;
 	}
 
 	#Gc-content {
@@ -1086,7 +1096,7 @@ tr:nth-child(even) {
 		display: none;
 	}
 
-	#Gc-content main .Gc-box-info {
+	#Gc-content #Gc-main-content .Gc-box-info {
 		grid-template-columns: 1fr;
 	}
 
@@ -1094,21 +1104,35 @@ tr:nth-child(even) {
 		width: 75px;
 	}
 
-	#Gc-content main .Gc-table-data .Gc-head {
+	#Gc-sidebar .Gc-side-menu li a {
+		font-size: 14px;
+	}
+
+	#Gc-sidebar .Gc-side-menu li {
+		padding: 14px 8px;
+	}
+
+	.Gc-Dropdown .bx-chevron-down {
+		min-width: 5px;
+		font-size: 25px;
+	}
+
+
+	#Gc-content #Gc-main-content .Gc-table-data .Gc-head {
 		min-width: 420px;
 
 	}
 
-	#Gc-content main .Gc-table-data .Gc-order table tr td .Gc-table-status {
+	#Gc-content #Gc-main-content .Gc-table-data .Gc-order table tr td .Gc-table-status {
 
 		padding: 4px 4px;
 	}
 
-	#Gc-content main .Gc-table-data .Gc-order table {
+	#Gc-content #Gc-main-content .Gc-table-data .Gc-order table {
 		min-width: 420px;
 	}
 
-	#Gc-content main .Gc-table-data .todo .todo-list {
+	#Gc-content #Gc-main-content .Gc-table-data .todo .todo-list {
 		min-width: 420px;
 	}
 
@@ -1141,6 +1165,7 @@ tr:nth-child(even) {
 	.Gc-employecard {
 		flex-direction: row;
 	}
+
 
 	#myChartthird,
 	#myChart2,
