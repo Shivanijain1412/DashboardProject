@@ -602,12 +602,13 @@ tr:nth-child(even) {
 
 #Gc-content main .Gc-table-data .Gc-order table tr td .Gc-table-status {
 	font-size: 10px;
-	padding: 3px 0px;
-	color: #F9F9F9;
-	border-radius: 20px;
-	font-weight: 700;
-	max-width: 60px;
-	text-align: center;
+    padding: 3px 5px;
+    color: #F9F9F9;
+    border-radius: 20px;
+    font-weight: 700;
+    width: 60px;
+    text-align: center;
+    display: inline-block;
 
 }
 
@@ -672,7 +673,7 @@ tr:nth-child(even) {
 	overflow-x: scroll;
 	width: 100%;
 	display: flex;
-	padding: 5px;
+	padding: 2px;
 	border-radius: 20px;
 
 }
@@ -705,7 +706,8 @@ tr:nth-child(even) {
 	align-items: center;
 	justify-content: center;
 	gap: 12px;
-	width: 210px;
+	width: 219px;
+
 }
 
 .Gc-doughnut {
@@ -762,7 +764,7 @@ tr:nth-child(even) {
 .Gc-doughnut .Gc-doughnut-details ul li {
 	list-style-type: none;
 	font-family: sans-serif;
-	gap: 4px;
+	gap: 3px;
 	list-style-type: none;
 	font-family: sans-serif;
 	display: flex;
@@ -1013,7 +1015,9 @@ tr:nth-child(even) {
 	margin: 5px auto;
 	text-decoration: none;
 }
-
+.Gc-announcement-icon img{
+  width: 48%;
+}
 /* MAIN */
 /* CONTENT */
 
