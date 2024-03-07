@@ -602,13 +602,13 @@ tr:nth-child(even) {
 
 #Gc-content main .Gc-table-data .Gc-order table tr td .Gc-table-status {
 	font-size: 10px;
-    padding: 3px 5px;
-    color: #F9F9F9;
-    border-radius: 20px;
-    font-weight: 700;
-    width: 60px;
-    text-align: center;
-    display: inline-block;
+	padding: 3px 5px;
+	color: #F9F9F9;
+	border-radius: 20px;
+	font-weight: 700;
+	width: 60px;
+	text-align: center;
+	display: inline-block;
 
 }
 
@@ -1015,9 +1015,11 @@ tr:nth-child(even) {
 	margin: 5px auto;
 	text-decoration: none;
 }
-.Gc-announcement-icon img{
-  width: 48%;
+
+.Gc-announcement-icon img {
+	width: 48%;
 }
+
 /* MAIN */
 /* CONTENT */
 
@@ -1210,6 +1212,7 @@ tr:nth-child(even) {
 		grid-template-columns: 1fr;
 		padding: 11px;
 	}
+
 	.Gc-productchart {
 		width: 250px;
 		padding: 11px 0px;
@@ -1247,5 +1250,5 @@ tr:nth-child(even) {
 		font-size: 30px;
 	}
 
-	
+
 }
