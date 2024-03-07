@@ -25,9 +25,10 @@
 
 	<!-- SIDEBAR -->
 	<section id="Gc-sidebar">
+		<!-- <h2>Sidebar Navigation</h2> -->
 		<a href="#" class="Gc-brand">
 			<i class='bx bxs-smile'></i>
-			<span class="Gc-text">Aureka</span>
+			<h4 class="Gc-text">Aureka</h4>
 		</a>
 		<ul class="Gc-side-menu Gc-top">
 			<li>
@@ -42,13 +43,17 @@
 
 			</li>
 			<!-- Dashboard submenu -->
-			<ul class="Gc-submenu" id="Gc-submenu-content">
-				<li><a href="#">Overview</a></li>
-				<li><a href="#">Orders</a></li>
-				<li><a href="#">Announcements</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">Subscription</a></li>
-			</ul>
+			<li id="Gc-submenu-content">
+				<ul class="Gc-submenu">
+					<li><a href="#">Overview</a></li>
+					<li><a href="#">Orders</a></li>
+					<li><a href="#">Announcements</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Subscription</a></li>
+				</ul>
+			</li>
+
+
 
 
 			<li>
@@ -61,13 +66,16 @@
 				</div>
 			</li>
 			<!-- Finance submenu -->
-			<ul class="Gc-submenu" id="Gc-Finance-Submenu">
-				<li><a href="#">Withdraw</a></li>
-				<li><a href="#">Reverse Withdrawal</a></li>
-				<li><a href="#">Payment</a></li>
-				<li><a href="#">Analytics</a></li>
+			<li id="Gc-Finance-Submenu">
+				<ul class="Gc-submenu">
+					<li><a href="#">Withdraw</a></li>
+					<li><a href="#">Reverse Withdrawal</a></li>
+					<li><a href="#">Payment</a></li>
+					<li><a href="#">Analytics</a></li>
 
-			</ul>
+				</ul>
+			</li>
+
 
 			<li>
 				<div class="Gc-Dropdown">
@@ -79,29 +87,35 @@
 				</div>
 			</li>
 			<!-- Operations submenu -->
-			<ul class="Gc-submenu" id="Gc-Operations-submenu">
-				<li><a href="#">Staff</a></li>
-				<li><a href="#">Delivery Management</a></li>
+			<li id="Gc-Operations-submenu">
+				<ul class="Gc-submenu">
+					<li><a href="#">Staff</a></li>
+					<li><a href="#">Delivery Management</a></li>
 
-			</ul>
+				</ul>
+			</li>
+
 			<li>
 				<div class="Gc-Dropdown">
 					<a href="#">
 						<i class='bx bxs-message-dots'></i>
-						<span class="Gc-text">Marleketing</span>
+						<span class="Gc-text">Marketing</span>
 					</a>
 					<i class='bx bx-chevron-down' onclick="MarketingSubMenu()"></i>
 				</div>
 			</li>
 			<!-- Marketing submenu -->
-			<ul class="Gc-submenu" id="Gc-Marketing-submenu">
-				<li><a href="#">Store Page</a></li>
-				<li><a href="#">Coupons</a></li>
-				<li><a href="#">Followers</a></li>
-				<li><a href="#">Social Profile</a></li>
-				<li><a href="#">Store SEO</a></li>
-				<li><a href="#">Badge</a></li>
-			</ul>
+			<li id="Gc-Marketing-submenu">
+				<ul class="Gc-submenu">
+					<li><a href="#">Store Page</a></li>
+					<li><a href="#">Coupons</a></li>
+					<li><a href="#">Followers</a></li>
+					<li><a href="#">Social Profile</a></li>
+					<li><a href="#">Store SEO</a></li>
+					<li><a href="#">Badge</a></li>
+				</ul>
+			</li>
+
 			<li>
 				<div class="Gc-Dropdown">
 					<a href="#">
@@ -112,11 +126,14 @@
 				</div>
 			</li>
 			<!-- Customer support submenu -->
-			<ul class="Gc-submenu" id="Gc-Customer-submenu">
-				<li><a href="#">Reviews</a></li>
-				<li><a href="#">Support</a></li>
+			<li id="Gc-Customer-submenu">
+				<ul class="Gc-submenu">
+					<li><a href="#">Reviews</a></li>
+					<li><a href="#">Support</a></li>
 
-			</ul>
+				</ul>
+			</li>
+
 		</ul>
 
 	</section>
@@ -125,7 +142,7 @@
 
 
 	<!-- CONTENT -->
-	<section id="Gc-content">
+	<main id="Gc-content">
 		<!-- NAVBAR -->
 		<nav id="Gc-nav">
 			<div class="Gc-adminname">
@@ -185,7 +202,7 @@
 		<!-- NAVBAR -->
 
 		<!-- MAIN -->
-		<main>
+		<div id="Gc-main-content">
 			<div class="Gc-head-title">
 				<div class="Gc-left">
 					<h1>Dashboard</h1>
@@ -627,9 +644,9 @@
 				</div>
 			</div>
 
-		</main>
+		</div>
 		<!-- MAIN -->
-	</section>
+	</main>
 
 	<!-- CONTENT -->
 
