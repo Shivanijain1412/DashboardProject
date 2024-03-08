@@ -462,11 +462,10 @@ window.addEventListener("resize", function () {
 });
 
 function mydropFunction() {
-  var GcprofileTrigger = document.getElementById("Gc-profileTrigger");
-  var myDropdown = document.getElementById("myDropdown");
+  var dropdown = document.getElementById("myDropdown");
 
-  GcprofileTrigger.addEventListener("click", function (e) {
-    // Toggle the display of the dropdown
-    myDropdown.classList.toggle("Gcdrop-show");
-  });
+  // Toggle the class to show/hide the dropdown content
+  dropdown.classList.toggle("Gcdrop-show");
 }
+
+
